@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import {
   LaptopMinimal,
   LayoutPanelTop,
-  PlaneIcon,
   Play,
   PlusIcon,
   Smartphone,
