@@ -1,12 +1,21 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { GoalIcon } from "lucide-react";
+import { supabaseBrowser } from "@/lib/supabase/browser";
 import Image from "next/image";
 import React from "react";
-import { Helmet } from "react-helmet";
 
 const page = () => {
+  const handleAuth = (provider: "google") => {
+    const supabase = supabaseBrowser();
+    supabase.auth.signInWithOAuth({
+      provider,
+      options: { redirectTo: location.origin + "/auth/callback" },
+    });
+  };
+
   return (
     <>
       <div className="flex flex-col items-center justify-center max-w-sm mx-auto px-14 md:p-5 bg-white">
@@ -32,7 +41,11 @@ const page = () => {
           Let’s get started by creating your account
         </p>
         <div className="flex flex-col items-center justify-start w-[27%] md:w-full mt-[38px] mb-[5px] gap-3.5">
-          <Button variant="outline" className="w-full">
+          <Button
+            variant="outline"
+            className="w-full"
+            onClick={() => handleAuth("google")}
+          >
             <Image
               src="/google.svg"
               alt="clearbiticone"

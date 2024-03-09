@@ -1,5 +1,6 @@
+"use client"
+
 import {
-  DropdownMenuItem,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import {
@@ -9,7 +10,7 @@ import {
   User2Icon,
   Zap,
 } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Dialog,
   DialogClose,
@@ -22,8 +23,18 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { getCurrentUser } from "@/lib/getCurrentUser";
 
 const Account = () => {
+  const [user, setUser] = React.useState<any>();
+  useEffect(() => {
+    const fetchData = async () => {
+      const user = await getCurrentUser();
+      setUser(user);
+    };
+
+    fetchData();
+  }, []);
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -44,17 +55,17 @@ const Account = () => {
         <div className="space-y-5">
           <div className="space-y-1">
             <p className="text-gray-600 font-semibold">Display Name</p>
-            <p className="font-semibold">Tony Stark</p>
+            <p className="font-semibold">{user?.name}</p>
           </div>
           <div className="space-y-1">
             <p className="text-gray-600 font-semibold">Email Address</p>
-            <p className="font-semibold">Hevink@gmail.com</p>
+            <p className="font-semibold">{user?.email}</p>
           </div>
           <div className="space-y-1">
             <div className="flex justify-between items-center">
               <div className="">
                 <p className="text-gray-600 font-semibold">Current Plan</p>
-                <p className="font-semibold">Tony Stark</p>
+                <p className="font-semibold">Free</p>
               </div>
               <Button
                 variant="outline"

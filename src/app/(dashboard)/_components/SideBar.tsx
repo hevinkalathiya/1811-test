@@ -58,7 +58,7 @@ const routes = [
   {
     icon: Boxes,
     label: "My-Projects",
-    href: "/dashboard/projects",
+    href: "/",
   },
   {
     icon: UserPlus,
