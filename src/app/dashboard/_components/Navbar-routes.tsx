@@ -1,8 +1,8 @@
 "use client";
 
-import { User } from "lucide-react";
 import BuyCredits from "./BuyCredits";
 import Notification from "./Notification";
+import UserProfile from "./UserProfile";
 
 export const NavbarRoutes = () => {
   return (
@@ -13,9 +13,7 @@ export const NavbarRoutes = () => {
       <div className="flex items-center gap-3">
         <BuyCredits />
         <Notification />
-        <div className="rounded-full p-2 border ">
-          <User className="h-[18px] w-[18px]" color="gray" />
-        </div>
+        <UserProfile />
       </div>
     </div>
   );
