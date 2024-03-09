@@ -14,7 +14,7 @@ import Image from "next/image";
 
 const BuyCredits = () => {
   return (
-    <Dialog >
+    <Dialog>
       <DialogTrigger asChild>
         <div className="flex flex-row justify-start bg-orange-200/20 border border-orange-500/30 rounded-lg p-2 cursor-pointer">
           <div className="flex flex-row justify-start items-center w-full gap-1">

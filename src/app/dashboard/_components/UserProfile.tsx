@@ -15,6 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Account from "./Account";
 
 const UserProfile = () => {
   return (
@@ -44,11 +45,7 @@ const UserProfile = () => {
               <div className="text-gray-500">hevinK@gmail.com</div>
             </div>
           </DropdownMenuLabel>
-
-          <DropdownMenuItem className="flex items-center">
-            <User2Icon className="h-5 w-5" />
-            <p className=" text-sm ml-2">Account</p>
-          </DropdownMenuItem>
+          <Account />
           <DropdownMenuSeparator />
           <DropdownMenuItem className="flex items-center">
             <CircleHelp className="h-5 w-5" />
