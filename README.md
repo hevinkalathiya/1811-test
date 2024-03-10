@@ -1,1 +1,1 @@
-![Home Screen] (/public/home screen.png)
+![Home Screen](/public/home-screen.png)
