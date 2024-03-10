@@ -14,9 +14,9 @@ import Templates from "./_components/Templates";
 import { cn } from "@/lib/utils";
 
 const Projects = () => {
-  const [currentTemplate, setCurrentTemplate] = React.useState("landscape");
+  const [currentTemplate, setCurrentTemplate] = React.useState("portrait");
   return (
-    <div className="p-4">
+    <div className="p-4 max-w-7xl ">
       <div className="flex justify-between">
         <div className="">
           <span className="border-b-2 border-black pb-1 flex gap-2 text-sm font-bold items-center">

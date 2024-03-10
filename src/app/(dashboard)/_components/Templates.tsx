@@ -38,12 +38,9 @@ const Templates: FC<TemplatesProps> = ({ type }) => {
               src={item?.images?.jpg?.image_url}
               alt="image"
               className={
-                (cn(
-                  "aspect-[9/16] object-cover w-full rounded-md md:aspect-auto md:h-[300px] lg:h-[400px]"
-                ),
                 type === "landscape"
-                  ? "h-[350px] w-[300px]"
-                  : "h-[200px] w-[500px]")
+                  ? "aspect-[9/16] object-cover md:aspect-auto md:h-[300px] lg:h-[400px] rounded-lg h-[350px] w-[300px]"
+                  : "aspect-[9/16] object-cover md:aspect-auto md:h-[200px] lg:h-[200px] rounded-lg h-[200px] w-[500px]"
               }
             />
             <div className="py-4">
