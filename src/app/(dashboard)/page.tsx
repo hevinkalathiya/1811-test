@@ -13,7 +13,7 @@ import React from "react";
 import Templates from "./_components/Templates";
 import { cn } from "@/lib/utils";
 
-const projects = () => {
+const Projects = () => {
   const [currentTemplate, setCurrentTemplate] = React.useState("landscape");
   return (
     <div className="p-4">
@@ -103,4 +103,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;
