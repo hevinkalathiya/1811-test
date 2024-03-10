@@ -48,3 +48,27 @@ These instructions will help you set up and run the project on your local machin
    ```bash
     npm run dev
    ```
+
+## First Screen
+
+![Home Screen](/public/login.PNG)
+
+## Second Screen
+
+![Home Screen](/public/home-screen.png)
+
+## Third Screen
+
+![Home Screen](/public/user-profile.PNG)
+
+## Four Screen
+
+![Home Screen](/public/account.PNG)
+
+## Fifth Screen
+
+![Home Screen](/public/credit.PNG)
+
+## Sixth Screen
+
+![Home Screen](/public/notification.PNG)
