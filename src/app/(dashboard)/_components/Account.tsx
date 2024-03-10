@@ -69,7 +69,7 @@ const Account = () => {
               </div>
               <Button
                 variant="outline"
-                className="flex items-center gap-x-2 py-4 bg-orange-500/20"
+                className="flex items-center gap-x-2 py-4 bg-orange-500/20 hover:bg-orange-500/20"
               >
                 <Zap size={22} className={cn("text-orange-500")} />
                 {"Upgrade Plan"}

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   LaptopMinimal,
@@ -8,8 +10,11 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import Templates from "./_components/Templates";
+import { cn } from "@/lib/utils";
 
 const projects = () => {
+  const [currentTemplate, setCurrentTemplate] = React.useState("landscape");
   return (
     <div className="p-4">
       <div className="flex justify-between">
@@ -50,25 +55,50 @@ const projects = () => {
           <PlusIcon className="mr-2" /> New Videos
         </Button>
       </div>
-      <div className="flex justify-between mt-5">
+      <div className="block md:flex items-center  justify-between mt-5">
         <div className="">
           <span className="border-b-2 border-black pb-1 flex gap-2 text-sm font-bold items-center">
             <LayoutPanelTop className="h-[16px] w-[16px]" /> Template
           </span>
         </div>
-        <div className="flex gap-2">
-          <Button size="sm" className="border border-black" variant={"outline"}>
+        <div className="block md:flex gap-2">
+          <Button
+            size="sm"
+            onClick={() => setCurrentTemplate("all")}
+            className={cn(
+              "border-transparent border-gray-300 mr-2",
+              currentTemplate === "all" && "border border-black"
+            )}
+            variant={"outline"}
+          >
             All
           </Button>
-          <Button size="sm" variant={"outline"}>
+          <Button
+            size="sm"
+            variant={"outline"}
+            onClick={() => setCurrentTemplate("portrait")}
+            className={cn(
+              "border-transparent border-gray-300 mr-2",
+              currentTemplate === "portrait" && "border border-black"
+            )}
+          >
             <LaptopMinimal color="gray" className="mr-2" />
             Portrait Video (9:16)
           </Button>
-          <Button size="sm" variant={"outline"}>
+          <Button
+            size="sm"
+            variant={"outline"}
+            onClick={() => setCurrentTemplate("landscape")}
+            className={cn(
+              "border-transparent border-gray-300 mr-2",
+              currentTemplate === "landscape" && "border border-black"
+            )}
+          >
             <Smartphone color="gray" className="mr-2" /> Landscape Video (16:9)
           </Button>
         </div>
       </div>
+      <Templates type={currentTemplate} />
     </div>
   );
 };
