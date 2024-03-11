@@ -1,6 +1,5 @@
 "use client";
 
-import { Boxes, UserPlus, AudioLines } from "lucide-react";
 import React, { FC } from "react";
 import SideBarItem from "./SideBarItem";
 

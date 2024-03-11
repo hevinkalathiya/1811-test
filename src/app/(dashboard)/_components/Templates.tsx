@@ -3,10 +3,9 @@
 import React, { FC } from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { cn } from "@/lib/utils";
 
 interface TemplatesProps {
-  type: string;
+  type?: string;
 }
 
 const Templates: FC<TemplatesProps> = ({ type }) => {

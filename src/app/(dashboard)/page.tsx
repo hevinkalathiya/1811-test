@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import {
   LaptopMinimal,
@@ -12,9 +10,22 @@ import Image from "next/image";
 import React from "react";
 import Templates from "./_components/Templates";
 import { cn } from "@/lib/utils";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
-const Projects = () => {
-  const [currentTemplate, setCurrentTemplate] = React.useState("portrait");
+const Projects = async () => {
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({ cookies: () => cookieStore });
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    redirect("/login");
+  }
+
   return (
     <div className="p-4 max-w-7xl ">
       <div className="flex justify-between">
@@ -64,10 +75,10 @@ const Projects = () => {
         <div className="block md:flex gap-2">
           <Button
             size="sm"
-            onClick={() => setCurrentTemplate("all")}
+            // onClick={() => setCurrentTemplate("all")}
             className={cn(
-              "border-transparent border-gray-300 mr-2",
-              currentTemplate === "all" && "border border-black"
+              "border-transparent border-gray-300 mr-2"
+              // currentTemplate === "all" && "border border-black"
             )}
             variant={"outline"}
           >
@@ -76,10 +87,10 @@ const Projects = () => {
           <Button
             size="sm"
             variant={"outline"}
-            onClick={() => setCurrentTemplate("portrait")}
+            // onClick={() => setCurrentTemplate("portrait")}
             className={cn(
-              "border-transparent border-gray-300 mr-2",
-              currentTemplate === "portrait" && "border border-black"
+              "border-transparent border-gray-300 mr-2"
+              // currentTemplate === "portrait" && "border border-black"
             )}
           >
             <LaptopMinimal color="gray" className="mr-2" />
@@ -88,17 +99,17 @@ const Projects = () => {
           <Button
             size="sm"
             variant={"outline"}
-            onClick={() => setCurrentTemplate("landscape")}
+            // onClick={() => setCurrentTemplate("landscape")}
             className={cn(
-              "border-transparent border-gray-300 mr-2",
-              currentTemplate === "landscape" && "border border-black"
+              "border-transparent border-gray-300 mr-2"
+              // currentTemplate === "landscape" && "border border-black"
             )}
           >
             <Smartphone color="gray" className="mr-2" /> Landscape Video (16:9)
           </Button>
         </div>
       </div>
-      <Templates type={currentTemplate} />
+      <Templates />
     </div>
   );
 };
