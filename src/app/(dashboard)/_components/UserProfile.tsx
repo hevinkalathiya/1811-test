@@ -102,7 +102,7 @@ const UserProfile = () => {
                 <p className="mr-0.5 font-bold !text-orange-600">
                   Your Credits : 4
                 </p>
-                <Image
+                <img
                   src="/plus-icon.svg"
                   alt="iconpark_one"
                   className="h-[20px] w-[20px] ml-2"
