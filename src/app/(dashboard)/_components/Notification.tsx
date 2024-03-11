@@ -15,7 +15,7 @@ const Notification = () => {
     <div className="rounded-full p-2 border ">
       <DropdownMenu dir="ltr">
         <DropdownMenuTrigger asChild>
-          <Bell className="h-[18px] w-[18px] cursor-pointer" color="gray" />
+          <Bell className="h-[18px] w-[18px] cursor-pointer" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-96 mt-3 mr-5">
           <DropdownMenuLabel className="flex justify-between items-center">

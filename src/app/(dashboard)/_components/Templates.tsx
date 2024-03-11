@@ -6,11 +6,14 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { LaptopMinimal, LayoutPanelTop, Smartphone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import BeatLoader from "react-spinners/BeatLoader";
 
 type TemplatesProps = {};
+
 const Templates: FC<TemplatesProps> = () => {
   const [data, setData] = useState<string[]>([]);
   const [currentTemplate, setCurrentTemplate] = useState<string>("portrait");
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     axios
@@ -23,11 +26,21 @@ const Templates: FC<TemplatesProps> = () => {
       })
       .then((response) => {
         setData(response.data.data);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching data: ", error);
+        setIsLoading(false);
       });
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex h-52 justify-center items-center">
+        <BeatLoader color="blue" />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -74,7 +87,7 @@ const Templates: FC<TemplatesProps> = () => {
           </Button>
         </div>
       </div>
-      <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
+      <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
         {data?.map((item: any, i: React.Key) => {
           return (
             <div key={i} className="rounded-md  ">

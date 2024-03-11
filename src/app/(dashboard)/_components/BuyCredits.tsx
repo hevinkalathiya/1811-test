@@ -16,7 +16,7 @@ const BuyCredits = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="flex flex-row justify-start bg-orange-200/20 border border-orange-500/30 rounded-lg p-2 cursor-pointer">
+        <div className="flex flex-row justify-start bg-orange-200/20 border border-orange-500/10 rounded-lg p-2 cursor-pointer">
           <div className="flex flex-row justify-start items-center w-full gap-1">
             <Image
               src="/hat.svg"
@@ -25,7 +25,7 @@ const BuyCredits = () => {
               height={20}
               width={20}
             />
-            <p className="mr-0.5 font-bold !text-orange-500">
+            <p className="mr-0.5 font-bold !text-orange-600">
               Your Credits : 4
             </p>
             <Image
