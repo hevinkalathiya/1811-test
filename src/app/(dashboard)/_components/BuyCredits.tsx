@@ -10,6 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Slider } from "@/components/ui/slider";
+import { PlusIcon } from "lucide-react";
 import Image from "next/image";
 
 const BuyCredits = () => {
@@ -28,12 +29,9 @@ const BuyCredits = () => {
             <p className="mr-0.5 font-bold !text-orange-600">
               Your Credits : 4
             </p>
-            <Image
-              src="/plus-icon.svg"
-              alt="iconpark_one"
-              className="h-[20px] w-[20px] ml-2"
-              height={20}
-              width={20}
+            <PlusIcon
+              className="h-[20px] w-[20px] ml-2 bg-orange-500 rounded-sm"
+              color="white"
             />
           </div>
         </div>

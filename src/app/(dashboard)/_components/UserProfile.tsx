@@ -102,7 +102,7 @@ const UserProfile = () => {
                 <p className="mr-0.5 font-bold !text-orange-600">
                   Your Credits : 4
                 </p>
-                <PlusIcon className="h-[20px] w-[20px] ml-2" color="orange" />
+                <PlusIcon className="h-[20px] w-[20px] ml-2 bg-orange-500 rounded-sm" color="white" />
               </div>
             </div>
           </DropdownMenuItem>
