@@ -102,13 +102,31 @@ const UserProfile = () => {
                 <p className="mr-0.5 font-bold !text-orange-600">
                   Your Credits : 4
                 </p>
-                <img
-                  src="/plus-icon.svg"
-                  alt="iconpark_one"
-                  className="h-[20px] w-[20px] ml-2"
-                  height={20}
-                  width={20}
-                />
+                <div className="h-[20px] w-[20px] ml-2">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="24" height="24" rx="4" fill="#FF4D00" />
+                    <path
+                      d="M12 7.33301V16.6663"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.33325 12H16.6666"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </DropdownMenuItem>
