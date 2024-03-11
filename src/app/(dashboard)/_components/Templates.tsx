@@ -45,12 +45,12 @@ const Templates: FC<TemplatesProps> = () => {
   return (
     <>
       <div className="block md:flex items-center  justify-between mt-5">
-        <div className="">
-          <span className="border-b-2 border-black pb-1 flex gap-2 text-sm font-bold items-center">
+        <div className=" pb-1 flex gap-2 text-sm font-bold items-center">
+          <span className="border-b-2 border-black flex items-center">
             <LayoutPanelTop className="h-[16px] w-[16px]" /> Template
           </span>
         </div>
-        <div className="block md:flex gap-2">
+        <div className="flex flex-wrap gap-2 mt-2 md:mt-0">
           <Button
             size="sm"
             onClick={() => setCurrentTemplate("all")}

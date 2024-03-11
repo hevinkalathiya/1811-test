@@ -15,6 +15,7 @@ import Account from "./Account";
 import { getCurrentUser } from "@/lib/getCurrentUser";
 import { useRouter } from "next/navigation";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import Image from "next/image";
 
 const UserProfile = () => {
   const [user, setUser] = React.useState<any>();
@@ -54,7 +55,7 @@ const UserProfile = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-auto mt-3 mr-5">
           <DropdownMenuLabel className="flex justify-start items-center gap-3">
-            <div className="mb-3">
+            <div>
               <Avatar>
                 <AvatarImage src={user?.avatar_url} alt="You" />
                 <AvatarFallback>Vatsal</AvatarFallback>
@@ -85,6 +86,31 @@ const UserProfile = () => {
           >
             <LogOutIcon className="h-5 w-5" />
             <p className=" text-sm ml-2">Log out</p>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+
+          <DropdownMenuItem className="">
+            <div className="md:hidden w-full mx-auto flex flex-row justify-start bg-orange-200/20 border border-orange-500/10 rounded-lg p-2 cursor-pointer">
+              <div className="flex flex-row justify-start items-center w-full gap-1">
+                <Image
+                  src="/hat.svg"
+                  alt="iconpark_one"
+                  className="h-[20px] w-[20px]"
+                  height={20}
+                  width={20}
+                />
+                <p className="mr-0.5 font-bold !text-orange-600">
+                  Your Credits : 4
+                </p>
+                <Image
+                  src="/plusicon.svg"
+                  alt="iconpark_one"
+                  className="h-[20px] w-[20px] ml-2"
+                  height={20}
+                  width={20}
+                />
+              </div>
+            </div>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center">
             <a href="" className="text-[12px]">
