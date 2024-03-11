@@ -1,6 +1,5 @@
 import { Bell } from "lucide-react";
 import React from "react";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,18 +36,18 @@ const Notification = () => {
           <DropdownMenuSeparator />
           <DropdownMenuItem className="flex flex-col justify-start items-start">
             <p className="text-sm">
-              Edit your information in a swipe Sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim.
+              It is a long established fact that a reader will be distracted by
+              the readable.
             </p>
-            <p className="text-gray-400 text-sm mt-2">12 May, 2025</p>
+            <p className="text-gray-400 text-sm mt-2">24 Feb, 2025</p>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem className="flex flex-col justify-start items-start">
             <p className="text-sm">
-              Edit your information in a swipe Sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim.
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered
             </p>
-            <p className="text-gray-400 text-sm mt-2">12 May, 2025</p>
+            <p className="text-gray-400 text-sm mt-2">04 Jan, 2025</p>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

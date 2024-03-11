@@ -1,8 +1,12 @@
 ![Home Screen](/public/home-screen.png)
 
-## Live Demo
+## Features
 
-Check out the live demo of the Task [here](https://1811.vercel.app/).🐳
+- Add authentication using supabase authentication
+- Protected routing when user login that time only user visit dashboard page
+- Modern UI
+- Instead static data i used jikans API with landscape and portrait
+- Building an responsive ui for mobile devices also
 
 ## Technologies Used
 
@@ -27,7 +31,7 @@ These instructions will help you set up and run the project on your local machin
 1. Clone the repository:
 
    ```bash
-   https://github.com/hevinkalathiya/1811-test.git
+   git clone https://github.com/hevinkalathiya/1811-test.git
    ```
 
 2. install node modules:
