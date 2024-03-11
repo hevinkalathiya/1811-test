@@ -29,7 +29,7 @@ const BuyCredits = () => {
               Your Credits : 4
             </p>
             <Image
-              src="/plusicon.svg"
+              src="/plus-icon.svg"
               alt="iconpark_one"
               className="h-[20px] w-[20px] ml-2"
               height={20}
