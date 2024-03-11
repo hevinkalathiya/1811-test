@@ -4,18 +4,18 @@ import React, { FC } from "react";
 import SideBarRoutes from "./SideBarRoutes";
 import Image from "next/image";
 import {
-  Boxes,
   UserPlus,
   AudioLines,
   BadgeCent,
   Zap,
   ArrowRight,
+  LayoutGrid,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-interface SideBarProps {}
+interface SideBarProps { }
 
-const SideBar: FC<SideBarProps> = ({}) => {
+const SideBar: FC<SideBarProps> = ({ }) => {
   return (
     <div className="h-screen flex flex-col overflow-y-auto border m-0 md:m-2 rounded-none  md:rounded-xl bg-white shadow-sm">
       <div className="p-0 md:p-2 mb-5 mt-2">
@@ -56,7 +56,7 @@ const SideBar: FC<SideBarProps> = ({}) => {
 
 const routes = [
   {
-    icon: Boxes,
+    icon: LayoutGrid,
     label: "My-Projects",
     href: "/",
   },

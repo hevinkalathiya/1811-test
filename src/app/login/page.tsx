@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { supabaseBrowser } from "@/lib/supabase/browser";
+import { Lock } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -18,8 +19,8 @@ const page = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center max-w-sm mx-auto px-14 md:p-5 bg-white">
-        <div className="flex flex-row justify-center items-center w-[11%] md:w-full gap-[3px]">
+      <div className="flex flex-col items-center justify-center max-w-md mx-auto px-5 md:px-14 md:p-5 bg-white">
+        <div className="flex flex-row justify-center items-center md:w-full gap-[3px]">
           <Image
             src="/videofat-logo.png"
             alt="clearbiticone"
@@ -37,10 +38,10 @@ const page = () => {
             Log in
           </p>
         </div>
-        <p className="mt-[7px] text-sm text-gray-600">
+        <p className="mt-[7px] text-sm text-gray-500 font-semibold">
           Let’s get started by creating your account
         </p>
-        <div className="flex flex-col items-center justify-start w-[27%] md:w-full mt-[38px] mb-[5px] gap-3.5">
+        <div className="flex flex-col items-center justify-start w-full mt-[38px] mb-[5px] gap-3.5">
           <Button
             variant="outline"
             className="w-full"
@@ -85,7 +86,7 @@ const page = () => {
                       type="password"
                       name="password"
                       placeholder="Password"
-                      // prefix={<Img src="images/img_lock.svg" alt="lock" />}
+                      prefixIcon={<Lock color="gray" className="h-4 w-4" />}
                       className="w-full md:h-auto gap-2"
                     />
                   </div>
@@ -113,7 +114,7 @@ const page = () => {
             </div>
             <p className="!text-gray-600">
               <span className="text-gray-600">Don’t have an account? </span>
-              <span className="text-indigo-A400 font-bold">Sign up</span>
+              <span className="text-indigo-600 font-bold">Sign up</span>
             </p>
           </div>
         </div>
