@@ -22,9 +22,9 @@ const Projects = async () => {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) {
-    redirect("/login");
-  }
+  // if (!user) {
+  //   redirect("/login");
+  // }
 
   return (
     <div className="p-4 max-w-7xl ">
